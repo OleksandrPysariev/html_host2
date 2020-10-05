@@ -17,24 +17,76 @@ body{
   }
   .zoom {
     padding: 0px;
-    background-color: green;
+    background-color: white;
     transition: transform .2s; /* Animation */
     
     margin: 0 auto;
   }
   
   .zoom:hover {
-    transform: scale(1.5); /* (150% zoom)*/
+    transform: scale(1.2); /* (150% zoom)*/
   }
 
   .card-zoom {
     padding: 0px;
-    background-color: green;
+    background-color: white;
     transition: transform .2s; /* Animation */
     
     margin: 0 auto;
   }
   
   .card-zoom:hover {
-    transform: scale(1.2); /* (150% zoom)*/
+    transform: scale(1.15); /* (150% zoom)*/
   }
+
+  .gallery-zoom {
+    padding: 0px;
+    background-color: white;
+    transition: transform .2s; /* Animation */
+    
+    margin: 0 auto;
+  }
+  
+  .gallery-zoom:hover {
+    transform: scale(1.05); /* (150% zoom)*/
+  }
+
+  /*********************** Demo - 1 *******************/
+.box1 img,.box1:after,.box1:before{width:100%;transition:all .3s ease 0s}
+.box1 .icon,.box2,.box3,.box4,.box5 .icon li a{text-align:center}
+.box10:after,.box10:before,.box1:after,.box1:before,.box2 .inner-content:after,.box3:after,.box3:before,.box4:before,.box5:after,.box5:before,.box6:after,.box7:after,.box7:before{content:""}
+.box1,.box11,.box12,.box13,.box14,.box16,.box17,.box18,.box2,.box20,.box21,.box3,.box4,.box5,.box5 .icon li a,.box6,.box7,.box8{overflow:hidden}
+.box1 .title,.box10 .title,.box4 .title,.box7 .title{letter-spacing:1px}
+.box3 .post,.box4 .post,.box5 .post,.box7 .post{font-style:italic}
+body{background-color:#f1f1f2}
+
+.box10,.box11,.box12,.box14,.box4,.box5,.box6,.box7,.box9{box-shadow:0 0 3px rgba(0,0,0,.3)}
+
+.box9 .icon,.box9 .title{width:100%;font-size:22px}
+
+
+
+/*********************** Demo - 9 *******************/
+.box9{background:#000;text-align:center;position:relative}
+.box9 img{width:100%;height:auto}
+.box9:hover img{opacity:.8}
+.box9 .box-content{background:rgba(0,0,0,.65);position:absolute;top:0;left:0;bottom:0;right:0;opacity:0}
+.box9:hover .box-content{opacity:1}
+.box9 .title{font-weight:700;color:#fff;}
+.box10 .icon li a,.box9 .icon li a{line-height:35px;border-radius:50%}
+.box9 .icon{list-style:none;padding:0;margin:0;position:absolute;top:50%}
+.box9 .icon li{display:inline-block;opacity:0;transform:translateY(40px)}
+.box9:hover .icon li{opacity:1;transform:translateY(0)}
+
+.box9 .icon li a{display:block;width:35px;height:35px;background:#0b5663;font-size:20px;color:#fff;margin-right:5px;transition:all .35s ease 0s}
+.box9 .icon a:hover{background:#fff}
+
+@media only screen and (max-width:990px){.box9{margin-bottom:20px}
+}
+
+
+
+.nopadding {
+    padding: 2px !important;
+    margin: 0px !important;
+ }
