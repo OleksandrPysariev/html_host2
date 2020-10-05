@@ -15,4 +15,26 @@ body{
     font-family: 'Nunito', sans-serif;
     
   }
- 
+  .zoom {
+    padding: 0px;
+    background-color: green;
+    transition: transform .2s; /* Animation */
+    
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.5); /* (150% zoom)*/
+  }
+
+  .card-zoom {
+    padding: 0px;
+    background-color: green;
+    transition: transform .2s; /* Animation */
+    
+    margin: 0 auto;
+  }
+  
+  .card-zoom:hover {
+    transform: scale(1.2); /* (150% zoom)*/
+  }

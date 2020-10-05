@@ -1,169 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>VisVis</title>
-  <!-- MDB icon -->
-  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-  <!-- Google Fonts Roboto -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!-- fancyBox CSS -->
-  <link href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="stylesheet">
-  <style>
-      img {
-          padding: 4px;
-          background-color: #fff;
-          border: 1px solid #ddd;
-          border-radius: 4px;
+    <title>Vis-Vis</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fancyBox CSS -->
+    <link href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="stylesheet">
+    <style>
+        .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+
+      /* Create four equal columns that sits next to each other */
+      .column {
+        flex: 25%;
+        max-width: 50%;
+        padding: 0 4px;
+      }
+
+      .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
       }
 
       img:hover {
           opacity: 0.6;
           filter: alpha(opacity=60);
       }
-  </style>
-  <!-- Material Design Bootstrap -->
-  <link rel="stylesheet" href="css/mdb.min.css">
-  <!-- Your custom styles (optional) -->
-  <link rel="stylesheet" href="css/style.css">
+
+      /* Responsive layout - makes a two column-layout instead of four columns */
+      @media screen and (max-width: 800px) {
+        .column {
+          flex: 50%;
+          max-width: 50%;
+        }
+      }
+
+      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column {
+          flex: 100%;
+          max-width: 100%;
+        }
+      }
+    </style>
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<!-- Main Navigation-->
 
-  <!--Main Navigation-->
-  
-<!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-dark special-color fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark special-color fixed-top">
 
-    <div class="container">
-      <!-- Navbar brand -->
-    <a class="navbar-brand" href="#">VisVis</a>
+  <div class="container">
+    <!-- Navbar brand -->
+  <a class="navbar-brand" href="#">VisVis</a>
 
-    <!-- Collapse button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="basicExampleNav">
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
 
-      <!-- Links -->
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home
-            
-          </a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="gallery.html">Gallery
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-
-        <!-- Dropdown -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">Dropdown</a>
-          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <!-- Collapsible content -->
-    </div>
-
-  </nav>
-  <br>
-  <br>
-  <!--/.Navbar-->
-  
-  <!--Main Layout-->
-
-
-  
-
-  <div class="container" id="images">
-    <div class="grid">
-        <a data-fancybox="gallery" href="img/vis/bedroom_card_cap.jpg">
-            <img class="img-fluid" src="img/vis/bedroom_card_cap.jpg" alt="">
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home
+          
         </a>
-        <a data-fancybox="gallery" href="img/vis/cc02.jpg">
-          <img class="img-fluid" src="img/vis/cc02.jpg" alt="">
-      </a>
-      <a data-fancybox="gallery" href="img/vis/bedroom-ver.jpg">
-        <img class="img-fluid" src="img/vis/bedroom-ver.jpg" alt="...">
-    </a>
-    <a data-fancybox="gallery" href="img/vis/bedroom_card_cap.jpg">
-        <img class="img-fluid" src="img/vis/bedroom_card_cap.jpg" alt="">
-    </a>
-    <a data-fancybox="gallery" href="img/vis/cc02.jpg">
-      <img class="img-fluid" src="img/vis/cc02.jpg" alt="">
-  </a>
-  <a data-fancybox="gallery" href="img/vis/bedroom_card_cap.jpg">
-    <img class="img-fluid" src="img/vis/bedroom_card_cap.jpg" alt="">
-</a>
-<a data-fancybox="gallery" href="img/vis/cc02.jpg">
-  <img class="img-fluid" src="img/vis/cc02.jpg" alt="">
-</a>
-<a data-fancybox="gallery" href="img/vis/bedroom-ver.jpg">
-<img class="img-fluid" src="img/vis/bedroom-ver.jpg" alt="...">
-</a>
-<a data-fancybox="gallery" href="img/vis/bedroom_card_cap.jpg">
-<img class="img-fluid" src="img/vis/bedroom_card_cap.jpg" alt="">
-</a>
-<a data-fancybox="gallery" href="img/vis/cc02.jpg">
-<img class="img-fluid" src="img/vis/cc02.jpg" alt="">
-</a>
-<a data-fancybox="gallery" href="img/vis/bedroom_card_cap.jpg">
-  <img class="img-fluid" src="img/vis/bedroom_card_cap.jpg" alt="">
-</a>
-<a data-fancybox="gallery" href="img/vis/cc02.jpg">
-<img class="img-fluid" src="img/vis/cc02.jpg" alt="">
-</a>
-<a data-fancybox="gallery" href="img/vis/bedroom-ver.jpg">
-<img class="img-fluid" src="img/vis/bedroom-ver.jpg" alt="...">
-</a>
-<a data-fancybox="gallery" href="img/vis/bedroom_card_cap.jpg">
-<img class="img-fluid" src="img/vis/bedroom_card_cap.jpg" alt="">
-</a>
-<a data-fancybox="gallery" href="img/vis/cc02.jpg">
-<img class="img-fluid" src="img/vis/cc02.jpg" alt="">
-</a>
-<a data-fancybox="gallery" href="img/vis/bedroom_card_cap.jpg">
-  <img class="img-fluid" src="img/vis/bedroom_card_cap.jpg" alt="">
-</a>
-<a data-fancybox="gallery" href="img/vis/cc02.jpg">
-<img class="img-fluid" src="img/vis/cc02.jpg" alt="">
-</a>
-<a data-fancybox="gallery" href="img/vis/bedroom-ver.jpg">
-<img class="img-fluid" src="img/vis/bedroom-ver.jpg" alt="...">
-</a>
-<a data-fancybox="gallery" href="img/vis/bedroom_card_cap.jpg">
-<img class="img-fluid" src="img/vis/bedroom_card_cap.jpg" alt="">
-</a>
-<a data-fancybox="gallery" href="img/vis/cc02.jpg">
-<img class="img-fluid" src="img/vis/cc02.jpg" alt="">
-</a>
-    </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="gallery.html">Gallery
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+
+      <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Dropdown</a>
+        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- Collapsible content -->
   </div>
 
-  <!--Main Layout-->
+</nav>
+<br>
+<br>
 
 
+<!-- Main Navigation-->
+<body>
 
-  <!-- jQuery -->
+  <div class="row">
+    <div class="column">
+      <img src="img/cc02.jpg">
+      <img src="img/vis/bedroom_card_cap.jpg">
+      <img src="img/vis/livingroom-ver.jpg">
+      <img src="img/vis/bedroom-ver.jpg">
+      <img src="img/vis/obj-price.jpg">
+      <img src="img/vis/welcome-logo.jpg">
+      <img src="img/vis/bathroom-price.jpg">
+    </div>
+    <div class="column">
+      <img src="img/vis/bathroom-price.jpg">
+      <img src="img/vis/livingroom-ver.jpg">
+      <img src="img/vis/bedroom_card_cap.jpg">
+      <img src="img/vis/bedroom-ver.jpg">
+      <img src="img/vis/obj-price.jpg">
+      <img src="img/vis/welcome-logo.jpg">
+      <img src="img/cc02.jpg">
+    </div>
+    
+  </div>
+
+<!-- jQuery -->
 <script src="js/jquery-3.2.1.js"></script>
 <!-- Popper -->
 <script src="js/popper.min.js"></script>
@@ -186,8 +162,5 @@ $(function() {
     $('.grid').gridify(options);
 });
 </script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-
 </body>
 </html>
