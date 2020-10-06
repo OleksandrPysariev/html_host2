@@ -49,19 +49,10 @@
         <a class="nav-link" href="gallery.html">Gallery</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" href="#contact">Contact</a>
       </li>
 
-      <!-- Dropdown -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">Dropdown</a>
-        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
+      
     </ul>
     <span class="navbar-text" style="color: aliceblue;">
       <row>
@@ -368,6 +359,90 @@
       </section>
       <!-- Section: View-gallery -->
     </div>
+    <!--Section: Contact v.2-->
+    <div class="container">
+<section class="mb-4">
+
+  <!--Section heading-->
+  <h2 id="contact" class="h1-responsive font-weight-bold text-center my-4">Contact me</h2>
+  <!--Section description-->
+  <p class="text-center w-responsive mx-auto mb-5">Are you interested? Let me know directly!</p>
+
+  <div class="row">
+    <div class="col-md-9 text-center">
+              <!--Grid row-->
+              <div class="row">
+                <div class="col-md-9 mb-md-0 mb-5">
+                  <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                    <div class="row">
+
+                      <!--Grid column-->
+                      <div class="col-md-6">
+                          <div class="md-form mb-0">
+                            <input type="text" name="text1" id="text1" class="form-control">
+                            <label for="text1" class="">Your name</label>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" name="text2" id="text2" class="form-control">
+                            <label for="text2" class="">Your email</label>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                          <div class="md-form mb-0">
+                            <input type="text" name="text3" id="text3" class="form-control">
+                            <label for="text3" class="">Subject</label>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="row">
+
+                      <!--Grid column-->
+                      <div class="col-md-12">
+    
+                          <div class="md-form">
+                            <input type="text" name="text" id="text4" class="form-control">
+                            <label for="message">Your message</label>
+                          </div>
+                      </div>
+                    </div>
+                    <input type="submit" value="submit">
+                  </form>
+                </div>
+              </div>
+            </div>
+          
+        
+      
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-md-3 text-center">
+          <ul class="list-unstyled mb-0">
+              <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                  <p>San Francisco, CA 94126, USA</p>
+              </li>
+
+              <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                  <p>+ 01 234 567 89</p>
+              </li>
+
+              <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                  <p>contact@mdbootstrap.com</p>
+              </li>
+          </ul>
+      </div>
+    </div>
+      <!--Grid column-->
+
+  </div>
+</div>
+</section>
+<!--Section: Contact v.2-->
   </main>
   <!--Main Layout-->
 
@@ -541,6 +616,19 @@ console.log("document is ready");
 // document ready  
 });
 
+  </script>
+  <script>
+    $('form').submit(function(e){
+	e.preventDefault();
+	$.ajax({
+  url:'https://api.telegram.org/bot'+'1319899047:AAEHDRySPy16BXGBjDPtoAnZjrs_-zUBQDc'+'/sendMessage',
+  method:'POST',
+  data:{chat_id: 260032377,text:'Name: ' + $('#text1').val()+ ', e-mail: ' + $('#text2').val()+ ', subject: ' + $('#text3').val()+ ', message: ' + $('#text4').val()},
+  success:function(){
+  	alert('your message has been sent!');
+  }
+  });
+});
   </script>
 
 </body>
