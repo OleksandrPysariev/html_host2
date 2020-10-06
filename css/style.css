@@ -24,7 +24,7 @@ body{
   }
   
   .zoom:hover {
-    transform: scale(1.2); /* (150% zoom)*/
+    transform: scale(1.1); /* (150% zoom)*/
   }
 
   .card-zoom {
@@ -68,8 +68,8 @@ body{background-color:#f1f1f2}
 
 
 /*********************** Demo - 9 *******************/
-.box9{background:#000;text-align:center;position:relative}
-.box9 img{width:100%;height:auto}
+.box9{background:#fff;text-align:center;position:relative;}
+.box9 img{width:100%;height:auto;}
 .box9:hover img{opacity:.8}
 .box9 .box-content{background:rgba(0,0,0,.65);position:absolute;top:0;left:0;bottom:0;right:0;opacity:0}
 .box9:hover .box-content{opacity:1}
